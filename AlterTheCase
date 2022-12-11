@@ -1,0 +1,22 @@
+import java.util.Scanner;
+
+public class AlterTheCase {
+
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in); //Creating Object For Scanner Class 
+		System.out.print("ENTER THE INPUT:");
+		String input=sc.next(); //Getting String As Input
+		String result="";
+		for(int h=0;h<input.length();h++){
+	           if(Character.isUpperCase(input.charAt(h))){ //To Check Each Character In Input String
+	        	   result+=String.valueOf(Character.toLowerCase(input.charAt(h))); //Changing Uppercase To LowerCase
+	           }
+	           else{
+	        	   result+=String.valueOf(Character.toUpperCase(input.charAt(h))); //Changing Lowercase To UpperCase
+	           }
+	       }
+		System.out.println("OUTPUT:"+result); //To Display Result
+		sc.close(); //To Avoid Source Leakage.Close The Scanner Object
+	}
+
+}
